@@ -1,0 +1,14 @@
+@media (max-width: 1400px) {
+
+    #main {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 500px 50px;
+        grid-template-areas:
+        "hd"
+        "sc"
+        "ft"
+        ;
+    }
+
+}
