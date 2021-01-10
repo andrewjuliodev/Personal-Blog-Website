@@ -8,13 +8,14 @@
 
     #main {
         display: grid;
-        grid-template-columns: 90%;
-        grid-template-rows: 150px 2400px 50px;
+        grid-template-columns: 100%;
+        grid-template-rows: 150px 2200px 50px;
         grid-template-areas:
         "hd"
         "sc"
         "ft";
         justify-content: center;
+        background-color: rgb(83, 80, 80, 0.035);
     }
 
     #header {
@@ -37,7 +38,7 @@
         justify-content: space-evenly;
         margin: 0px;
         padding: 0px;
-        background-color: rgb(83, 80, 80, 0.05);
+        background-color: rgb(83, 80, 80, 0.1);
     }
 
     li {
@@ -79,15 +80,15 @@
 
     #blue:hover {
         border-bottom: 3px solid rgb(31, 116, 196);
-        background-color: rgb(83, 80, 80, 0.1); 
+        background-color: rgb(83, 80, 80, 0.1);
     }
 
     #yellow {
-        border-bottom: 2px solid rgb(211, 230, 40);
+        border-bottom: 2px solid rgb(247, 244, 63);
     }
 
     #yellow:hover {
-        border-bottom: 3px solid rgb(211, 230, 40);
+        border-bottom: 3px solid rgb(247, 244, 63);
         background-color: rgb(83, 80, 80, 0.1);
     }
 
@@ -113,10 +114,10 @@
         grid-template-areas: 
         "img"
         "content"
-        "date";
+        "ctft";
         border: 1px solid rgb(149, 151, 151);
         border-radius: 5px;
-        margin: 10px;
+        margin: 20px;
     }
 
     .image {
@@ -132,10 +133,6 @@
         object-fit: fill;
     }
 
-    img:hover {
-        opacity: 0.4;
-    }
-
     .card-content {
         grid-area: "content";
         padding: 25px 40px;
@@ -149,10 +146,39 @@
         font-weight: 600;
     }
 
+    .trips {
+        border-bottom: 3px solid rgb(77, 196, 140);
+    }
+
+    .food {
+        border-bottom: 2px solid rgb(202, 102, 102);
+    }
+
+    .beaches {
+        border-bottom: 2px solid rgb(31, 116, 196);
+    }
+
+    .content-footer {
+        grid-area: "ctft";
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+        "date . . . share";
+        border-bottom: none;
+    }
+
     .date {
         grid-area: "date";
         text-align: left;
-        padding: 10px 40px;
+        padding: 5px 40px;
+        border-bottom: none;
+    }
+
+    .share {
+        grid-area: "share";
+        max-width: 60%;
+        max-height: 60%;
     }
 
     /* Styling the links */
@@ -166,10 +192,16 @@
         color: #2c2e2e;
     }
 
+    .image img:hover {
+        opacity: 0.4;
+    }
+
     a:active {
         text-decoration: none;
     }
 
-    
+    .footer {
+        background-color: rgb(83, 80, 80, 0.1);
+    }
     
 }
