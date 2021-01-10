@@ -17,6 +17,7 @@
 
     #section {
         grid-area: "sc";
+        justify-content: center;
     }
 
     #footer {
@@ -25,17 +26,19 @@
 
     #section {
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: wrap;
+        align-content: flex-start;
     }
     .card {
         display: grid;
-        grid-template-columns: 360px;
+        grid-template-columns: 340px;
         grid-template-rows: 250px 250px;
         grid-template-areas: 
         "img"
         "content";
-
-        
+        border: 1px solid rgb(149, 151, 151);
+        border-radius: 5px;
+        margin: 20px;
     }
 
     .image {
@@ -43,8 +46,10 @@
     }
 
     img {
-        width: 360px;
-        height: 250px;
+        max-width: 100%;
+        max-height: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
     .card-content {
