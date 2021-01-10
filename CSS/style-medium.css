@@ -9,7 +9,7 @@
     #main {
         display: grid;
         grid-template-columns: 90%;
-        grid-template-rows: 100px 2400px 50px;
+        grid-template-rows: 150px 2400px 50px;
         grid-template-areas:
         "hd"
         "sc"
@@ -19,16 +19,76 @@
 
     #header {
         grid-area: "hd";
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "logo"
+        "nav";
+    }
+
+    #logo {
+        grid-area: "logo";
     }
 
     .nav {
+        grid-area:"nav";
         list-style-type: none;
         display: flex;
         justify-content: space-evenly;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(83, 80, 80, 0.05);
+    }
+
+    li {
+        width: 150px;
+        padding: 10px;
+        text-align: center;
     }
 
     #grey {
-        border-bottom: 2px solid grey;
+        border-bottom: 2px solid rgb(102, 100, 100);
+    }
+
+    #grey:hover {
+        border-bottom: 3px solid rgb(102, 100, 100);
+        background-color: rgb(83, 80, 80, 0.1);
+    }
+
+    #rose {
+        border-bottom: 2px solid rgb(202, 102, 102);
+    }
+
+    #rose:hover {
+        border-bottom: 3px solid  rgb(202, 102, 102);
+        background-color: rgb(83, 80, 80, 0.1);
+    }
+
+    #green {
+        border-bottom: 2px solid rgb(77, 196, 140);
+    }
+
+    #green:hover {
+        border-bottom: 3px solid rgb(77, 196, 140);
+        background-color: rgb(83, 80, 80, 0.1);
+    }
+
+    #blue {
+        border-bottom: 2px solid rgb(31, 116, 196);
+    }
+
+    #blue:hover {
+        border-bottom: 3px solid rgb(31, 116, 196);
+        background-color: rgb(83, 80, 80, 0.1); 
+    }
+
+    #yellow {
+        border-bottom: 2px solid rgb(211, 230, 40);
+    }
+
+    #yellow:hover {
+        border-bottom: 3px solid rgb(211, 230, 40);
+        background-color: rgb(83, 80, 80, 0.1);
     }
 
     #section {
@@ -110,6 +170,6 @@
         text-decoration: none;
     }
 
-
+    
     
 }

@@ -13,6 +13,50 @@
 
     #header {
         grid-area: "hd";
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "logo"
+        "nav";
+    }
+
+    #logo {
+        grid-area: "logo";
+    }
+
+    .nav {
+        grid-area:"nav";
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #grey {
+        border-bottom: 3px solid grey;
+    }
+
+    #rose {
+        border-bottom: 3px solid rgb(202, 102, 102);
+    }
+
+    #green {
+        border-bottom: 2px solid rgb(77, 196, 140);
+    }
+
+    #blue {
+        border-bottom: 2px solid rgb(31, 116, 196);
+    }
+
+    #yellow {
+        border-bottom: 2px solid rgb(211, 230, 40);
     }
 
     #section {
@@ -29,32 +73,69 @@
         flex-flow: wrap;
         align-content: flex-start;
     }
-    
+
     .card {
         display: grid;
-        grid-template-columns: 340px;
-        grid-template-rows: 250px 250px;
+        grid-template-columns: 350px;
+        grid-template-rows: 233px 210px 40px;
         grid-template-areas: 
         "img"
-        "content";
+        "content"
+        "date";
         border: 1px solid rgb(149, 151, 151);
         border-radius: 5px;
-        margin: 20px;
+        margin: 10px;
     }
 
     .image {
         grid-area: "img";
+        background-color:#2c2e2e;
     }
 
     img {
-        max-width: 100%;
-        max-height: 100%;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: fill;
+    }
+
+    img:hover {
+        opacity: 0.4;
     }
 
     .card-content {
         grid-area: "content";
+        padding: 25px 40px;
+    }
+
+    .post-title, .category, .post-des {
+        padding: 5px 0px;
+    }
+
+    .category, .date {
+        font-weight: 600;
+    }
+
+    .date {
+        grid-area: "date";
+        text-align: left;
+        padding: 10px 40px;
+    }
+
+    /* Styling the links */
+    a:link, a:visited {
+        text-decoration: none;
+        color: #2c2e2e;
+    }
+
+    .card a:hover {
+        text-decoration: underline;
+        color: #2c2e2e;
+    }
+
+    a:active {
+        text-decoration: none;
     }
 
 }
