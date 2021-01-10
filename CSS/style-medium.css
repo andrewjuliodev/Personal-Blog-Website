@@ -2,13 +2,52 @@
 
     #main {
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 500px 500px 50px;
+        grid-template-columns: 90%;
+        grid-template-rows: 100px 500px 50px;
         grid-template-areas:
         "hd"
         "sc"
-        "ft"
-        ;
+        "ft";
+        justify-content: center;
+
+    }
+
+    #header {
+        grid-area: "hd";
+    }
+
+    #section {
+        grid-area: "sc";
+    }
+
+    #footer {
+        grid-area: "ft"
+    }
+
+    #section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 360px;
+        grid-template-rows: 250px 250px;
+        grid-template-areas: 
+        "img"
+        "content";
+    }
+
+    .image {
+        grid-area: "img";
+    }
+
+    img {
+        width: 360px;
+        height: 250px;
+    }
+
+    .card-content {
+        grid-area: "content";
     }
 
 }

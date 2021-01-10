@@ -7,5 +7,5 @@
 /* Boxes for visual aid in determining the UI*/
 .box {
     border: 1px solid lightseagreen;
-    background: lightsteelblue;
+    background: rgb(221, 232, 247);
 }
