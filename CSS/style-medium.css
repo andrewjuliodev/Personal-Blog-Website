@@ -29,6 +29,7 @@
 
     #logo {
         grid-area: "logo";
+        background-image: url("/Images/test.jpeg");;
     }
 
     .nav {
